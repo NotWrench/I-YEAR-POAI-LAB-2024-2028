@@ -51,4 +51,5 @@ def print_board(board: List[List[int]]):
         row_str = ' '.join(str(col) for col in row)
         print(row_str)
 
+
 solve_8_queens()
