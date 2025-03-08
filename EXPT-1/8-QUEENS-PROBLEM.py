@@ -1,5 +1,6 @@
 from typing import List
 
+
 BOARD_SIZE = 8
 
 
