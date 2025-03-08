@@ -4,6 +4,12 @@ from typing import List
 BOARD_SIZE = 8
 
 
+def print_board(board: List[List[int]]) -> None:
+    for row in board:
+        row_str = ' '.join(str(col) for col in row)
+        print(row_str)
+
+
 def is_safe_to_move(board: List[List[int]], row: int, col: int) -> bool:
     for i in range(col):
         if board[row][i] == 1:
@@ -22,7 +28,7 @@ def is_safe_to_move(board: List[List[int]], row: int, col: int) -> bool:
     return True
 
 
-def place_queen(board: List[List[int]], col):
+def place_queen(board: List[List[int]], col) -> bool:
     if col == BOARD_SIZE:
         print_board(board)
         return True
@@ -45,12 +51,6 @@ def solve_8_queens() -> bool:
         return False
 
     return True
-
-
-def print_board(board: List[List[int]]):
-    for row in board:
-        row_str = ' '.join(str(col) for col in row)
-        print(row_str)
 
 
 solve_8_queens()
