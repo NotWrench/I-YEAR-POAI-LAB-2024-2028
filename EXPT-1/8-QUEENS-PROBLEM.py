@@ -43,13 +43,13 @@ class EightQueens:
         if not self.solve(0):
             return "No solution found"
 
-        return '\n'.join(
-            ' '.join('Q' if cell == 1 else '-' for cell in row)
+        return "\n".join(
+            " ".join("Q" if cell == 1 else "-" for cell in row)
             for row in self.solution
         )
             
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     eight_queens = EightQueens()
     eight_queens.solve(0)
     print(eight_queens)
