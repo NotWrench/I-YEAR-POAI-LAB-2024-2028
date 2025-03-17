@@ -3,14 +3,14 @@ from typing import List
 
 class NQueens:
     n: int
-    board: List[List[int]]
-    solution: List[List[int]]
+    solution: List[List[int]] | None
 
     def __init__(self, n: int):
         self.n = n
-        self.board = [[0 for _ in range(n)] for _ in range(n)]
         self.solution = [[0 for _ in range(n)] for _ in range(n)]
-
+        if not self.solve(0):
+            self.solution = None
+        
     def is_safe_to_move(self, row: int, col: int):
         for i in range(col):
             if self.solution[row][i] == 1:
@@ -40,7 +40,7 @@ class NQueens:
         return False
 
     def __str__(self):
-        if not self.solve(0):
+        if self.solution is None:
             return "No solution exists"
 
         return "\n".join(
@@ -52,6 +52,5 @@ class NQueens:
 if __name__ == "__main__":
     n = int(input("Enter the number of queens: "))
     n_queens = NQueens(n)
-    n_queens.solve(0)
     print(n_queens)
     

@@ -2,14 +2,12 @@ from typing import List
 
 
 class EightQueens:
-    n: int = 8
-    board: List[List[int]]
-    solution: List[List[int]]
+    solution: List[List[int]] | None
 
     def __init__(self):
-        self.n = n
-        self.board = [[0 for _ in range(n)] for _ in range(n)]
-        self.solution = [[0 for _ in range(n)] for _ in range(n)]
+        self.solution = [[0 for _ in range(8)] for _ in range(8)]
+        if not self.solve(0):
+            self.solution = None
 
     def is_safe_to_move(self, row: int, col: int):
         for i in range(col):
@@ -20,17 +18,17 @@ class EightQueens:
             if self.solution[i][j] == 1:
                 return False
 
-        for i, j in zip(range(row, self.n, 1), range(col, -1, -1)):
+        for i, j in zip(range(row, 8, 1), range(col, -1, -1)):
             if self.solution[i][j] == 1:
                 return False
         
         return True
 
     def solve(self, col: int):
-        if col == self.n:
+        if col == 8:
             return True
 
-        for i in range(self.n):
+        for i in range(8):
             if self.is_safe_to_move(i, col):
                 self.solution[i][col] = 1
                 if self.solve(col + 1):
@@ -40,7 +38,7 @@ class EightQueens:
         return False
 
     def __str__(self):
-        if not self.solve(0):
+        if self.solution is None:
             return "No solution found"
 
         return "\n".join(
@@ -51,6 +49,5 @@ class EightQueens:
 
 if __name__ == "__main__":
     eight_queens = EightQueens()
-    eight_queens.solve(0)
     print(eight_queens)
     
