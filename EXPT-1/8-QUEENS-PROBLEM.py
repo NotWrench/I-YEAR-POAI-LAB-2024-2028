@@ -20,8 +20,8 @@ def is_safe_to_move(board: List[List[int]], row: int, col: int) -> bool:
         if board[i][j] == 1:
             return False
         
-    lower_digonal = zip(range(row, BOARD_SIZE), range(col, -1, -1))
-    for i, j in lower_digonal:
+    lower_diagonal = zip(range(row, BOARD_SIZE), range(col, -1, -1))
+    for i, j in lower_diagonal:
         if board[i][j] == 1:
             return False
         
