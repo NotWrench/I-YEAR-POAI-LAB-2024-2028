@@ -5,13 +5,13 @@ class NQueens:
     n: int
     solution: List[List[int]] | None
 
-    def __init__(self, n: int):
+    def __init__(self, n: int) -> None:
         self.n = n
         self.solution = [[0 for _ in range(n)] for _ in range(n)]
         if not self.solve(0):
             self.solution = None
         
-    def is_safe_to_move(self, row: int, col: int):
+    def is_safe_to_move(self, row: int, col: int) -> bool:
         for i in range(col):
             if self.solution[row][i] == 1:
                 return False
@@ -26,7 +26,7 @@ class NQueens:
         
         return True
 
-    def solve(self, col: int):
+    def solve(self, col: int) -> bool:
         if col == self.n:
             return True
 
@@ -39,7 +39,7 @@ class NQueens:
 
         return False
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.solution is None:
             return "No solution exists"
 

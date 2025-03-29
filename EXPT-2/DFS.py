@@ -5,7 +5,7 @@ class Graph:
     vertices: int
     graph: Dict[int, List[int]]
 
-    def __init__(self, vertices: int):
+    def __init__(self, vertices: int) -> None:
         self.vertices = vertices
         self.graph = {i: [] for i in range(self.vertices)}
 
@@ -16,7 +16,7 @@ class Graph:
             self.graph[v].append(u)
             print(f"Edge added: ({u}, {v})")
 
-    def walk(self, node: int, visited: Set) -> bool:
+    def walk(self, node: int, visited: Set) -> None:
         """Helper function to recursively perform DFS in the graph"""
         visited.add(node)
         print(node, end=" ")
@@ -25,7 +25,7 @@ class Graph:
             if adj not in visited:
                 self.walk(adj, visited)
 
-    def dfs(self, start_node: int):
+    def dfs(self, start_node: int) -> None:
         """Performs DFS (Depth First Search) traversal"""
         if start_node >= self.vertices:
             print("Start node is out of bounds.")
