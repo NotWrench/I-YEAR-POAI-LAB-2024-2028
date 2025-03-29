@@ -1,21 +1,20 @@
 from typing import Dict, List, Set
 
+
 class Graph:
     vertices: int
     graph: Dict[int, List[int]]
-    
+
     def __init__(self, vertices: int):
         self.vertices = vertices
         self.graph = {i: [] for i in range(self.vertices)}
 
-    
     def add_edge(self, u: int, v: int) -> None:
         """Adds edges to the graph"""
         if 0 <= u < self.vertices and 0 <= v < self.vertices:
             self.graph[u].append(v)
             self.graph[v].append(u)
             print(f"Edge added: ({u}, {v})")
-
 
     def walk(self, node: int, visited: Set) -> bool:
         """Helper function to recursively perform DFS in the graph"""
@@ -26,18 +25,16 @@ class Graph:
             if adj not in visited:
                 self.walk(adj, visited)
 
-
     def dfs(self, start_node: int):
         """Performs DFS (Depth First Search) traversal"""
         if start_node >= self.vertices:
             print("Start node is out of bounds.")
             return
-        
+
         visited = set()
         print(f"DFS starting from node: {start_node}")
         self.walk(start_node, visited)
         print()
-
 
     def show_graph(self) -> None:
         """To print the graph"""
