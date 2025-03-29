@@ -48,14 +48,17 @@ class Graph:
 
 
 if __name__ == "__main__":
-    graph = Graph(6)
+    vertices = int(input("Enter the number of vertices: "))
+    graph = Graph(vertices)
 
-    graph.add_edge(0, 1)
-    graph.add_edge(0, 2)
-    graph.add_edge(1, 3)
-    graph.add_edge(1, 4)
-    graph.add_edge(2, 5)
+    edges_count = int(input("Enter the number of edges: "))
+    print("Enter the edges (u v):")
+
+    for _ in range(edges_count):
+        u, v = map(int, input().split())
+        graph.add_edge(u, v)
 
     graph.show_graph()
 
-    graph.dfs(0)
+    start_node = int(input("\nEnter the start node for DFS: "))
+    graph.dfs(start_node)
