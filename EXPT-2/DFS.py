@@ -41,7 +41,7 @@ class Graph:
 
     def show_graph(self) -> None:
         """To print the graph"""
-        print("Graph:")
+        print("\nGraph:")
         for node, neighbors in self.graph.items():
             neighbors_str = ", ".join(map(str, neighbors))
             print(f"{node} → {neighbors_str if neighbors else 'No connections'}")
