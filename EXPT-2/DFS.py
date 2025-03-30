@@ -1,13 +1,13 @@
-from typing import Dict, List, Set
-
+from typing import List, Set
+from collections import defaultdict
 
 class Graph:
     vertices: int
-    graph: Dict[int, List[int]]
+    graph: defaultdict[int, List[int]]
 
     def __init__(self, vertices: int) -> None:
         self.vertices = vertices
-        self.graph = {i: [] for i in range(self.vertices)}
+        self.graph = defaultdict(list)
 
     def add_edge(self, u: int, v: int) -> None:
         """Adds edges to the graph"""
