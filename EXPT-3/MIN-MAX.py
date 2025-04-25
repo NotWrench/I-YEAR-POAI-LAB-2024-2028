@@ -115,7 +115,6 @@ class AIPlayer(Player):
             temp_game.make_move(move, player)
             sim_result = self.minimax(temp_game, other_player)
 
-            # Store the current move as the position
             sim_score = {'position': move, 'score': sim_result['score']}
 
             if player == max_player:
