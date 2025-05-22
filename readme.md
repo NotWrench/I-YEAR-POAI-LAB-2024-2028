@@ -7,10 +7,12 @@
 
 ## Subject Staff: Mr. U. Kumaran
 
-# Experiments
+# Experiments:
 
 ## [Experiment 1 - 8 Queens Problem](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/tree/master/EXPT-1/8-QUEENS-PROBLEM.py/)
 
 ## [Experiment 2 - DFS using Graph](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-2/DFS.py)
 
 ## [Experiment 3 - Tic Tac Toe using MinMax](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-3/MIN-MAX.py)
+
+## [Experiment 4 - A* Search Algorithm](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-4/AStarSearch.py)
