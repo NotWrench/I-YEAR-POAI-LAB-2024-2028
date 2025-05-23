@@ -55,7 +55,7 @@ class ResolutionEngine:
         resolvents = []
         for l1 in c1:
             for l2 in c2:
-                if l1 == self.negate(l2): # e.g., l1 is P, l2 is ~P
+                if l1 == self.negate(l2):
                     new_clause = (c1.union(c2)) - {l1, l2}
                     resolvents.append(new_clause)
         return resolvents
