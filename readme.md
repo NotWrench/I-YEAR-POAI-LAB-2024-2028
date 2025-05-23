@@ -9,10 +9,22 @@
 
 # Experiments:
 
-## [Experiment 1 - 8 Queens Problem](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/tree/master/EXPT-1/8-QUEENS-PROBLEM.py/)
+## [Experiment 1 - 8 Queens Problem](EXPT%201/8-Queens.py)
 
-## [Experiment 2 - DFS using Graph](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-2/DFS.py)
+## [Experiment 2 - DFS using Graph](EXPT%202/DFS.py)
 
-## [Experiment 3 - Tic Tac Toe using MinMax](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-3/MIN-MAX.py)
+## [Experiment 3 - Tic Tac Toe using MinMax](EXPT%203/MIN-MAX.py)
 
-## [Experiment 4 - A* Search Algorithm](https://github.com/NotWrench/I-YEAR-POAI-LAB-2024-2028/blob/master/EXPT-4/AStarSearch.py)
+## [Experiment 4 - A* Search Algorithm](EXPT%204/AStarSearch.py)
+
+## [Experiment 5 - Min and Max using Prolog](EXPT%205/Min%20Max.pl)
+
+## [Experiment 6 - Unfication and Resolution](EXPT%206/Unification%20and%20Resolution.py)
+
+## [Experiment 7 - Backward Chaining](EXPT%207/Backward%20Chaining.py)
+
+## [Experiment 8 - Forward Chaining](EXPT%208/Forward%20Chaining.py)
+
+## [Experiment 9 - Blocks World](EXPT%209/Blocks%20World.py)
+
+## [Experiment 10 - Fuzzy Inference System](EXPT%2010/Fuzzy%20Inference%20System.py)
