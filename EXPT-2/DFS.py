@@ -1,6 +1,7 @@
 from typing import List, Set
 from collections import defaultdict
 
+
 class Graph:
     vertices: int
     graph: defaultdict[int, List[int]]

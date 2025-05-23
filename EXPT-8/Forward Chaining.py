@@ -8,6 +8,7 @@ class Rule:
             return f"{self.conclusion}."
         return f"{self.conclusion} :- {', '.join(self.conditions)}."
 
+
 class KnowledgeBase:
     def __init__(self):
         self.facts = set()
@@ -89,6 +90,7 @@ class KnowledgeBase:
 
         return goal in inferred_facts
 
+
 def main():
     kb = KnowledgeBase()
 
@@ -116,6 +118,7 @@ def main():
         print(f"The goal '{goal}' can be achieved.")
     else:
         print(f"The goal '{goal}' cannot be achieved.")
+
 
 if __name__ == "__main__":
     main()

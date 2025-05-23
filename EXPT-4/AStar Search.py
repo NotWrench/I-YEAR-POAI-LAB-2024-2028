@@ -10,6 +10,7 @@ class Node:
     def __lt__(self, other):
         return self.f < other.f
 
+
 class AStarSearch:
     def __init__(self, start, goal, grid_size):
         self.start, self.goal = start, goal
@@ -58,6 +59,7 @@ class AStarSearch:
                         heapq.heappush(open_set, neighbor)
         return None
 
+
 def get_input():
     def parse_tuple(s):
         x, y = map(int, s.strip().split(','))
@@ -71,6 +73,7 @@ def get_input():
     goal = parse_tuple(input("Enter goal position (x,y): "))
 
     return start, goal, grid_size
+
 
 if __name__ == "__main__":
     start, goal, grid_size = get_input()

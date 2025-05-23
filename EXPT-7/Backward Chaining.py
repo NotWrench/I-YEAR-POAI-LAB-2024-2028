@@ -8,6 +8,7 @@ class Rule:
             return f"THEN {self.conclusion}"
         return f"IF {' AND '.join(self.conditions)} THEN {self.conclusion}"
 
+
 class KnowledgeBase:
     def __init__(self):
         self.facts = {}
@@ -72,6 +73,7 @@ class KnowledgeBase:
         _being_proved.remove(goal)
         return False
 
+
 def get_user_facts(kb):
     print("\n--- Enter Facts ---")
     while True:
@@ -106,6 +108,7 @@ def get_user_facts(kb):
                 print("Invalid input. Please enter 't', 'f', 'true', 'false', '1', or '0'.")
         kb.add_fact(fact_name, fact_value)
 
+
 def get_user_rules(kb):
     print("\n--- Enter Rules ---")
     while True:
@@ -138,6 +141,7 @@ def get_user_rules(kb):
             break
         kb.add_rule(conclusion, conditions)
 
+
 def main():
     kb = KnowledgeBase()
 
@@ -160,6 +164,7 @@ def main():
         print(f"\nSUCCESS: The goal '{goal}' can be achieved.")
     else:
         print(f"\nFAILURE: The goal '{goal}' cannot be achieved.")
+
 
 if __name__ == "__main__":
     main()
