@@ -17,7 +17,8 @@
 
 ## [Experiment 4 - A* Search Algorithm](EXPT%204/AStarSearch.py)
 
-## [Experiment 5 - Min and Max using Prolog](EXPT%205/Min%20Max.pl)
+## [Experiment 5a - Min and Max using Prolog](EXPT%205/Min%20Max.pl)
+## [Experiment 5b - Decision Making and Knowledge Representation using Prolog](EXPT%205/Decision%20Making%20and%20Knowledge%20Representation.pl)
 
 ## [Experiment 6 - Unfication and Resolution](EXPT%206/Unification%20and%20Resolution.py)
 
